@@ -37,64 +37,258 @@
 
 /*universal*/
 
-html {
+html, body{
   font-size: 16px;
   font-family: "lato";
-  background-color: #fafafa;
-  line-height: 1.75rem;
+  line-height: 1.75;
+  color: #C77612;
+  margin: 0px;
+  padding: 0px;
+}
+
+.flex-box{
+  display: flex;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
-  color: #004a7c;
+  color: #C77612;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/*header section*/
+
+@media only screen and (min-width:480px) {
+  .mobile {
+    display:none;
+  }
 }
 
-
-/* header & navigation*/
+ul {
+  list-style-type: none;
+}
 
 header {
-  display: flex;
-  height: 64px;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 18px;
-}
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-.logo-container img {
-  height: 3rem;
-  margin-left: 24px;
+  top: 0px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: #fafafa;
+  height: 4rem;
+  border-bottom: 3px solid #C77612;
 }
 
-.bold {
-  font-weight: bold;
-  color: #004a7c	;
+header nav {
+  height: 2rem;
+  padding: 1rem 1.5rem;
 }
 
-.light {
-  color: #005691	;
-  font-weight: lighter;
+header .logo {
+  flex: 1;
+}
+
+header .logo img {
+  width: 2rem;
+  color: #;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 1rem;
+}
+
+nav a:hover{
+  text-decoration: underline;
 }
 
 .bold, .light {
   text-transform: uppercase;
-  font-size: 2rem;
-
-}
-.mobile {
-  display: none;
 }
 
-nav span {
-  padding: 0px 8px;
-  margin-right: 24px;
+.bold {
+  font-weight: bold;
+  color: #C77612
 }
-nav span:hover {
-  text-decoration: underline;
+
+.light {
+  font-weight: lighter;
+  color: #E7B872;
+} 
+
+/*banner section*/
+
+.banner {
+  padding-top: 4rem;
+  background-color: #e4ddd4;
+}
+
+.banner .container {
+  padding: 2rem 1.5rem;
+}
+
+.banner .image-container {
+  width: 60%;
+  height: auto;
+  overflow: hidden;
+}
+
+.banner-content {
+  margin-left: 1.5rem;
+  width: 35%;
+}
+
+.banner h1 {
+  font-size: 3rem;
   font-weight: bold;
 }
 
-/* BANNER SECTION*/
+.banner p {
+  font-size: 1.5rem;
+}
 
+.button {
+  background: #b8bb9a;
+  color: #896c49;
+  padding: .5rem;
+  max-width: 100%;
+  font-size: 1.25rem;
+  display: block;
+  text-align: center;
+  border: 3px solid #C77612;
+  transition: all 500ms ease-in-out 500ms;
+} 
+
+.button:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: #fafafa;
+}
+
+/*information Section*/
+
+.info-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem 0rem 2rem 1.5rem;
+}
+
+.highlight-container {
+  width: 60%;
+}
+
+.info-text h1 {
+  font-size: 2rem;
+  padding-top: 2rem;
+  margin: 0px;
+}
+
+.info-text p {
+  margin: 0px;
+  padding: 1.5rem 0rem;
+}
+
+.info-text h3 {
+  margin: 0px;
+  font-size: 0.8rem;
+}
+
+.box-column {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  border-left: #E7B872 3px solid;
+  border-right: #E7B872 3px solid;
+}
+
+.info-box .text {
+  width: 65%;
+  height: auto;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.info-box {
+  border-bottom: #E7B872 3px solid;
+}
+
+.info-box .image-container {
+  width: 35%;
+  height: auto;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.info-box .box-text {
+  width: 65%;
+  padding-right: 1rem;
+}
+
+.box-text h3 {
+  font-size: 1.25rem;
+}
+
+.box-text p {
+  font-size: 0.8rem;
+}
+
+.read-more {
+  color: #896c49
+}
+
+.read-more:hover {
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+
+.background-green {
+  background-color: #b8bb9a;
+}
+
+/*Course Section*/
+
+.learn-container {
+  padding: 2rem 4.5rem;
+  background-color: #e4ddd4;
+}
+
+.learn-container h1 {
+ text-align: center;
+ margin: 0;
+ padding: 2rem;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.course-box {
+  flex: 1;
+}
+
+.course-box .image-container {
+  height: auto;
+  overflow: hidden;
+}
+.course-box:hover {
+  background-color: #b8bb9a;
+}
+.course-box h3, h4, p {
+  margin: 0px;
+}
+.course-box h3 {
+padding-top: 1rem;
+}
+
+.course-box h4 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
